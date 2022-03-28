@@ -18,10 +18,10 @@
                         <a href="{{route('admin.posts.show',$post->id)}}" class="btn btn-sm btn-success"><i class="fa-solid fa-eye"></i></a>
                         <a href="{{route('admin.posts.edit',$post->id)}}" class="btn btn-sm btn-warning mx-3"><i class="fa-solid fa-pencil"></i></a>
                     </div>
-                    <form action="" method="POST">
+                    <form action="{{route('admin.posts.destroy',$post->id)}}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                     </form>
                     
                 </div>
